@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>배열 Arrays</title>
+		<script type="text/javascript">
+		/* 
+			배열 => 	크기 지정하지 않아도 된다.
+					모든 자료형 담을 수 있다.
+					보통은 별도의 배열 표시를 하지 않는다.
+		
+		*/
+		
+			//	방법1
+			let arr = new Array();
+			arr[0] = 10;
+			arr[1] = true;
+			arr[2] = 'A';
+			arr[3] = '인재개발원';
+			arr[4] = 3.14;
+			
+			console.log(arr);
+			
+			//	출력
+			for (let i = 0; i < arr.length; i++) {
+				document.write(`${arr[i]} &nbsp&nbsp&nbsp`);
+			}
+			document.write(`<hr>`);
+			
+			for (let k in arr) {
+				//	** k 는 value 가 아니라 index 이다
+				document.write(`${arr[k]} &nbsp&nbsp&nbsp`);
+			}
+			document.write(`<hr>`);
+			
+			//	방법2
+			let arr2 = ['한국', 'ICT', 10, 45.25, false];
+			for (let k in arr2) {
+				document.write(`${arr2[k]} &nbsp&nbsp&nbsp`);
+			}
+			document.write(`<hr>`);
+			
+			//	방법3
+			//	문자열을 배열로 할 수 있다.
+			let myData = 'java, html, css, js, spring';
+			//	, 콤마 기준으로 분리하여 배열로 만든다.
+			let myArr = myData.split(',');
+			for (let k in myArr) {
+				document.write(`${myArr[k]} &nbsp&nbsp&nbsp`);
+			}
+			document.write(`<hr>`);
+			
+			//	배열을 문자열로 바꾸는 방법 => 배열.join('구분절')
+			arr2 = ['한국', 'ICT', 10, 45.25, false];
+			//	원하는 구분절(문자열)을 넣어서 문자열로 나열할 수 있다.
+			let str = arr2.join('~~');
+			document.write(str);
+			document.write(`<hr>`);
+			
+			let myArr2 = ['한국', 'ICT', 10, 45.25, false];
+			//	배열 마지막 요소 추가하기 => push()
+			myArr2.push('JSP');
+			console.log(myArr2);
+			for (let k in myArr2) {
+				document.write(`${myArr2[k]} &nbsp&nbsp&nbsp`);
+			}
+			document.write(`<hr>`);
+			
+			//	배열 마지막 요소 삭제하기 => pop()
+			myArr2.pop();			
+			console.log(myArr2);
+			for (let k in myArr2) {
+				document.write(`${myArr2[k]} &nbsp&nbsp&nbsp`);
+			}
+			document.write(`<hr>`);
+			
+			//	배열 맨처음 요소 추가하기 => unshift()
+			myArr2.unshift('JSP');
+			console.log(myArr2);
+			for (let k in myArr2) {
+				document.write(`${myArr2[k]} &nbsp&nbsp&nbsp`);
+			}
+			document.write(`<hr>`);
+			
+			//	배열 맨처음 요소 삭제하기 => shift()
+			myArr2.shift();			
+			console.log(myArr2);
+			for (let k in myArr2) {
+				document.write(`${myArr2[k]} &nbsp&nbsp&nbsp`);
+			}
+			document.write(`<hr>`);
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>변수 var</title>
+		<script type="text/javascript">
+			
+			//	JS 변수 : 자료형을 지정하지 않는다.
+			//			숫자로 시작할 수 없다.
+			//			대소문자 구별 가능
+			
+			//	문자 표기 방법
+			//		1) 카멜 표기법 : myFirstHome
+			//		2) 팟홀 표기법 : my_first_home
+			
+			//	변수 생성
+			
+			//		1. var 이름 = 데이터(정수, 실수, boolean, char, string, 
+			//							null, function, class, ...)
+			
+					var name = 'bathingape';
+					console.log(name);
+			
+			//		** var 단점 : 같은 이름의 변수를 여러번 선언해도 오류가 나지않는다. 
+					var name = 'javacript';
+					console.log(name);
+			
+			//	ES 란 ECMA Script 의 줄임말로, 자바스크립트의 표준, 규격을 나타내는 용어이다.
+			
+			//		2. let => 권장 (재선언 불가능, 재할당 가능)
+		
+					let addr  = 'bathingpape';
+					console.log(addr);
+						
+			//		**let 은 다시 선언하면 오류 발생			
+					//let addr = 'javacript';
+					//console.log(addr);
+			
+					//	변수에 데이터를 다시 넣어 줄 수 있다.
+					addr = addr + '12345';
+					console.log(addr);
+						
+					//	변수에 문자열 합지기 가능
+					let str = 'Hello ' + addr;
+					console.log('str = ' + str);
+						
+					//	자바스크립트 표현식 사용 가능
+					let str2 = `Hello ${addr}`;
+					console.log('str2 = ' + str2);
+					
+					//	콘솔 안에도 표현식 사용 가능
+					console.log('str3 = ' + `Hello ${addr}`);
+					
+			//		3. const => 상수 (재선언, 재할당 불가능)
+			
+					const gender = '남성';
+					console.log(gender);
+					
+					//	재선언 불가능
+					//const gender = '여성';
+					
+					//	이클립스에서는 오류가 안나지만,
+					//	브라우저 f12 에서는 오류가 발생 (즉, JS에서는 오류 발생)
+					//	재할당 불가능
+					//gender = '여성';
+					//console.log(gender);
+					
+			//	호이스팅 : var 나 function 선언문 등을 해당 스코프의 선두로 옮긴 것처럼 동작하는 특성을 말한다.
+			//				let, const 도 호이스팅을 하지만, var 로 선언된 변수와는 달리 
+			//				let 으로 선언된 변수를 선언문 이전에 참조하면 참조 에러(ReferenceError)가 발생한다.
+			//	(즉, 선언한 애들을 먼저 읽고, 그다음에 콘솔창에 출력한다.)
+					
+					//	에러는 안나지만, undefined 가 발생한다. (출력이 안됨)
+					console.log(age);
+					var age = 14;
+					
+					//	참조 에러 발생
+					//console.log(age2);
+					//let age2 = 27;
+					
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

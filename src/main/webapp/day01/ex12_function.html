@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>함수</title>
+		
+		<!-- 선언하기 전에는 호출할 수 없다. -->
+		<script type="text/javascript">
+			document.write(`전~~~`);
+			//msg1();	참조오류
+			//	오류가 발생해도 계속 진행된다. (자바처럼 멈추지 않는다.)
+			//	** 항상 F12 를 켜서 확인하자
+		</script>
+		
+		<script type="text/javascript">
+		
+			msg1();
+	
+			//	호이스팅 : 선언한 내용을 맨처음으로 올리는 특징
+			//	선언 함수는 호이스팅이 된다.
+			function msg1() {
+				document.write(`<p>hi~~~~</p>`);
+			}
+			function msg1() {
+				document.write(`<p>hello!!!</p>`);
+			}
+			//	함수명이 같으면, 맨마지막에 생성된게 이전거를 덮어쓴다.
+			
+		</script>
+		
+		<!-- 선언한 다음 자바스크립트에서도 호출이 가능 -->
+		<script type="text/javascript">
+			//	**익명함수는 호이스팅이 안된다. (호이스팅은 선언된 것만 맨위로 올린다.)
+			//msg2();
+			msg1();
+			let msg2 = function() {
+				document.write(`<p>hi2222</p>`);
+			}
+			//	익명함수는 만들때 생성된다.
+			msg2();
+		</script>
+		<script type="text/javascript">
+			function msg3() {
+				document.write(`<p>1111111111</p>`);
+			}
+			//	var 는 상관없지만
+			//	let 는 이름 겹쳐서 오류 발생
+			//	결과도 안나온다.
+			//let msg3 = function() {
+			//	document.write(`<p>2222222222</p>`);
+			//}
+			msg3();
+			
+		</script>
+	</head>
+	<body>
+		<!-- 바디에서도 호출이 가능 -->
+		<script type="text/javascript">
+			msg1();
+		</script>
+	</body>
+</html>

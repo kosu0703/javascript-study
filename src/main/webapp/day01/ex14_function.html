@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>화살표함수</title>
+		<script type="text/javascript">
+		
+			//	화살표함수는 익명함수에만 사용된다.
+			//	let|const 변수명 = (매개변수) => {함수 내용}
+			
+			//	매개변수 없을때
+			const hi = function() {
+				return 'hi';
+			}
+			const hi2 = () => {return 'hi2';}
+			//	**내용이 한줄이면 블록 {} 과 return 을 생략 가능하다.  
+			//	(자바의 람다식처럼)
+			const hi3 = () => 'hi2';
+					
+			//	매개변수 하나일때
+			const k1 = function(name) {
+				document.write(`${name}님<br>`);
+			}
+			const k2 = (name) => {return name + '님'}
+			//	매개변수가 하나 => 괄호 () 생략  
+			//	한줄이면 => return, 블럭 {} 생략
+			const k3 = name => name + '님';
+			
+			k1('장발산');
+			document.write(`${k2('홍길동')}<br>`);
+			document.write(`${k3('일지매')}<br>`);
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

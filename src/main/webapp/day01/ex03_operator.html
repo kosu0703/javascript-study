@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>연산자</title>
+		<script type="text/javascript">
+		
+			//	정수와 실수의 타입(자료형)은 number 이다.
+			let myInt = 5;
+			let myFloat = 3.1425;
+			
+			console.log(`myInt = ${myInt}`);
+			console.log('정수 타입 = ' + typeof myInt);
+			
+			console.log(`myFloat = ${myFloat}`);
+			console.log('실수 타입 = ' + typeof myFloat);
+			
+			//	실수의 원하는 위치에서 고정된 소수점 자리수를 반올림 
+			//	toFixed() 메서드 사용
+			let num1 = 1.766548;
+			let res = num1.toFixed(3);
+			//	소수점 셋째자리까지 나타내고, 넷째자리에서 반올림
+			console.log(res);
+			
+			//	문자를 숫자로 변경
+			let num2 = "75";
+			res = num2 + 5;
+			console.log(res + ', ' + typeof res);
+			
+			//	Number() 사용
+			res = Number(num2) + 5;
+			console.log(res + ', ' + typeof res);
+			
+			//	Number() 안에 숫자가 아닌 문자가 들어가면,
+			//	NaN (Not a Number) 가 출력된다.
+			//	숫자 자리에 맞지 않은 문자가 들어가 있고, 계산을 할 수 없다.
+			//	(즉, 숫자형 문자가 아니다라는 의미)
+			res = Number("한국") + 5;	
+			console.log(res + ', ' + typeof res);
+
+			//	산술연산자
+			document.write("<h2>산술연산자");
+			document.write("<p>(+, -, *, /, %, **)</p>");
+			let su1 = 7;
+			let su2 = 3;
+			document.write(su1 + "+" + su2 + "=" + (su1 + su2) + "<br>");
+			document.write(su1 + "-" + su2 + "=" + (su1 - su2) + "<br>");
+			document.write(su1 + "*" + su2 + "=" + (su1 * su2) + "<br>");
+			document.write(su1 + "/" + su2 + "=" + (su1 / su2).toFixed(1) + "<br>");
+			document.write(su1 + "%" + su2 + "=" + (su1 % su2) + "<br>");
+			document.write(su1 + "**" + su2 + "=" + (su1 ** su2) + "<br>");
+			document.write("</h2>");
+			document.write(`<hr>`);
+			
+			//	증감연산자 
+			document.write("<h2>증감연산자");
+			document.write("<p>(++, --)</p>");
+			//	숫자에 직접 사용하지 못하고, 변수를 이용해야 된다.
+			//document.write(3++);
+			let num3 = 4;
+			document.write(++num3 + "<br>");	//	먼저 1 증가 => 5
+			document.write(num3++ + "<br>");	//	나중에 1 증가 => 5
+			document.write(num3 + "<br>");		//	=> 6
+			document.write("</h2>");
+			document.write(`<hr>`);
+			
+			//	대입연산자
+			document.write("<h2>대입연산자");
+			document.write("<p>(+=, -=, *=, /=)</p>");
+			su1 = 7;
+			
+			su1 += 7 ;
+			document.write("su1 += 7 => " + su1 + "<br>")
+			su1 -= 7 ;
+			document.write("su1 -= 7 => " + su1 + "<br>")
+			su1 *= 7 ;
+			document.write("su1 *= 7 => " + su1 + "<br>")
+			su1 /= 7 ;
+			document.write("su1 += 7 => " + su1 + "<br>")
+			document.write("</h2>");
+			document.write(`<hr>`);
+		
+			//	비교연산자
+			document.write("<h2>비교연산자");
+			document.write("<p>(>, >=, <, <=, ==, !=, ===, !==)</p>");
+			su1 = 7;
+			su2 = 3;
+			document.write(`${su1} >= ${su2} : ${su1 >= su2 } <br>`);
+			document.write(`${su1} <= ${su2} : ${su1 <= su2 } <br>`);
+			document.write(`${su1} == ${su2} : ${su1 == su2 } <br>`);
+			document.write(`${su1} != ${su2} : ${su1 != su2 } <br>`);
+			//	주의사항1
+			document.write("<p>비교연산자 주의사항1</p>");
+			su1 = 1000;
+			su2 = "1000";
+			//	숫자와 문자형 숫자를 숫자처럼 비교한다.
+			document.write(`${su1} == ${su2} : ${su1 == su2 } <br>`);	//	true
+			document.write(`${su1} != ${su2} : ${su1 != su2 } <br>`);	//	false
+			
+			//	자료형까지 일치한지 물어볼때 사용 (===, !==)
+			//	(즉, 자료형과 데이터 값이 모두 일치해야만 true 가 된다.)
+			document.write(`${su1} === ${su2} : ${su1 === su2 } <br>`);	//	false
+			document.write(`${su1} !== ${su2} : ${su1 !== su2 } <br>`);	//	true
+		
+			//	주의사항2
+			document.write("<p>비교연산자 주의사항2</p>");
+			//	false 를 0 으로 , true 를 1 로 
+			//	boolean 형과 숫자를 비교
+			su1 = true;
+			su2 = 1;
+			document.write(`${su1} == ${su2} : ${su1 == su2 } <br>`);	
+			document.write(`${su1} != ${su2} : ${su1 != su2 } <br>`);	
+			//	자료형까지 일치해야됨
+			document.write(`${su1} === ${su2} : ${su1 === su2 } <br>`);	
+			document.write(`${su1} !== ${su2} : ${su1 !== su2 } <br>`);	
+			document.write("</h2>");
+			document.write(`<hr>`);
+			
+			//	논리연산자
+			document.write("<h2>논리연산자");
+			document.write("<p>(&&, ||, !)</p>");
+			su1 = true;
+			su2 = false;
+			//	AND 연산자 && : 모두 참일때만 참
+			document.write("<p>AND 연산자 &&</p>");
+			document.write(`${su1} && ${su1} : ${su1 && su1 } <br>`);	
+			document.write(`${su1} && ${su2} : ${su1 && su2 } <br>`);	
+			document.write(`${su2} && ${su1} : ${su2 && su1 } <br>`);	
+			document.write(`${su2} && ${su2} : ${su2 && su2 } <br>`);	
+			//	OR 연산자 || : 하나라도 참일때 참
+			document.write("<p>OR 연산자 ||</p>");
+			document.write(`${su1} || ${su1} : ${su1 || su1 } <br>`);	
+			document.write(`${su1} || ${su2} : ${su1 || su2 } <br>`);	
+			document.write(`${su2} || ${su1} : ${su2 || su1 } <br>`);	
+			document.write(`${su2} || ${su2} : ${su2 || su2 } <br>`);	
+			document.write("</h2>");
+			document.write(`<hr>`);
+			
+			//	삼항연산자
+			document.write("<h2>삼항연산자");
+			document.write("<p>결과 = 조건식 ? 참일때 : 거짓일때 ;</p>");
+			//	자바에서는 결과, 참결과, 거짓결과 모두 같은 자료형이어야 하지만,
+			//	자바스크립트에서는 상관없다.
+			su1 = 75;
+			
+			//	su1 이 60 이상이면 합격, 아니면 불합격
+			res = su1 >= 60 ? "합격" : "불합격" ;
+			document.write(`결과 : ${res}`);
+			document.write("</h2>");
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

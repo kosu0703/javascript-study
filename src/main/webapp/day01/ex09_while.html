@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>반복문 while</title>
+		<script type="text/javascript">
+		
+		/* 
+			초기식
+			while(조건식){
+				조건이 참일때 실행;
+				증감식;
+			}
+			
+			초기식
+			while(true){
+				if(빠져나갈조건) break;
+				실행;
+				증감식;
+			}
+		
+		*/
+		
+			//	1-10 까지 출력
+			
+			let i = 1;
+			while (i < 11) {
+				document.write(`${i}<br>`)
+				i++;
+			}
+			document.write(`<hr>`)
+			
+			i = 1;
+			while (true) {
+				if (i >= 11) break;
+				document.write(`${i}<br>`)
+				i++;
+			}
+			document.write(`<hr>`)
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

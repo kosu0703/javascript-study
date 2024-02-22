@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Dialog : 대화상자</title>
+		<script type="text/javascript">
+			
+			//	자바스크립트에서는 3가지의 대화상자가 있다.
+			//		**경고창 => alert() 
+			//		확인창 => confirm() 
+			//		입력창 => prompt()
+				
+			document.write("<h2>");
+			
+			//	alert 는 리턴값이 없다. (사용자에게 정보를 알리는 창)
+			//let k1 = alert('안녕하세요\nHi~~~~~~');
+			//document.write(`k1 = ${k1}`);
+			
+			//	**헤드에서 경고창으로 잡고있으면 body 로 넘어가지 않는다.
+			
+			//	confirm 은 리턴값이 있다.
+			//	확인 버튼과 취소 버튼이 있다.
+			//	확인(true), 취소(false)
+			//let k1 = confirm('방가방가');
+			//document.write(`k1 = ${k1}`);
+			
+			//	prompt 는 사용자에게 정보를 입력받아 전달하는 역할을 한다.
+			//	하지만 form 태그를 이용하는 경우가 많아서 활용도가 떨어진다.
+			//	확인 버튼과 취소 버튼이 있다.
+			//	확인(입력데이터), 취소(null)
+			//	초기값도 지정 가능하다.
+			let k1 = prompt('나이를 입력하세요', 32);	
+			document.write(`k1 = ${k1}`);
+			
+			document.write("</h2>");
+			
+		</script>
+	</head>
+	<body>
+		<h1>본문 내용</h1>
+	</body>
+</html>

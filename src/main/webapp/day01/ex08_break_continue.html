@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>break 와 continue</title>
+		<script type="text/javascript">
+			
+			//	break : 멈추고 탈출
+			for (var i = 1; i < 10; i++) {
+				if (i == 5) break;
+				document.write(`i = ${i}<br>`);	
+			}
+			document.write(`<hr>`);	
+			
+			//	continue : 해당 회차만 제외하고 진행
+			for (var i = 1; i < 10; i++) {
+				if (i == 5) continue;
+				document.write(`i = ${i}<br>`);	
+			}
+			document.write(`<hr>`);	
+			
+			//	짝수만 찍기 (홀수 제외)
+			for (var i = 1; i < 10; i++) {
+				if (i%2==1) continue;
+				document.write(`i = ${i}<br>`);	
+			}
+			document.write(`<hr>`);	
+			
+			// 	홀수만 찍기 (짝수 제외)
+			for (var i = 1; i < 10; i++) {
+				if (i%2==0) continue;
+				document.write(`i = ${i}<br>`);	
+			}
+			document.write(`<hr>`);	
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

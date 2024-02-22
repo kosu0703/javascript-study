@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>함수(리턴 유무)</title>
+		<script type="text/javascript">
+		
+			//	리턴 없는 함수
+			function add(a,b) {
+				document.write(`결과 : ${a+b} <br>`);
+			}
+			
+			//	리턴 있는 함수
+			function sub(a,b) {
+				return (a-b);
+			}
+			
+			//	리턴 없음			
+			function cnt1(a,b) {
+				let k = 0;
+				for (let i = a; i <= b; i++) {
+					if (i%2==0) {
+						k++;
+					}
+				}
+				document.write(`짝수의 개수 : ${k}개 <br>`);
+			}
+			
+			//	리턴 있음
+			function cnt2(a,b) {
+				let k = 0;
+				for (let i = a; i <= b; i++) {
+					if (i%2==0) {
+						k++;
+					}
+				}
+				return k;
+			}
+			
+		</script>
+	</head>
+	<body>
+	
+		<h2>자바스크립트 함수연습</h2>
+		
+		<script type="text/javascript">
+			
+			//	리턴 없는 함수 호출
+			add(7,5);
+			
+			//	리턴 있는 함수 
+			let res = sub(7,5);
+			document.write(`결과 : ${res} <br>`);
+			document.write(`<hr>`);
+			
+			//	두 숫자를 받아서 두 숫자 사이의 짝수가 얼마나 있는지 구하는 함수
+			cnt1(1,25);
+			let res2 = cnt2(1,10);
+			document.write(`짝수의 개수 : ${res2}개 <br>`);
+			document.write(`<hr>`);
+			
+		</script>
+		
+	</body>
+</html>
