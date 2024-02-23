@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>콜백함수</title>
+		<script type="text/javascript">
+			
+			function myfunc() {
+				alert(`경고메시지-1`);
+			}
+			//	1. 함수에서 함수호출
+			function send_go1() {
+				//	3초 후에 myfunc 선언함수 호출
+				//	함수 안에는 함수의 이름만 넣어서 호출 ( **괄호 () 제거 )
+				setTimeout(myfunc, 3000);
+			}
+			//	2. 콜백 익명함수 사용
+			function send_go2() {
+				//	내장메서드 사용
+				//	setTimeout(콜백익명함수, 밀리초)
+				//	3초 후에 익명함수 호출
+				setTimeout(function() {
+					alert(`경고메시지-2`);
+				}, 3000);
+			}
+			//	3. 콜백 익명함수 화살표함수로 사용
+			function send_go3() {
+				//	function 을 지우고 인자와 블럭사이에 화살표를 넣는다.				
+				//	3초 후에 화살표함수 호출
+				setTimeout(() => {
+					alert(`경고메시지-3`);
+				}, 3000);
+			}
+		
+		</script>
+	</head>
+	<body>
+<!-- 
+		**콜백함수 : 매개변수를 함수로 전달받아, 함수의 내부에서 실행하는 함수
+ -->	
+		
+		<button onclick="send_go1()">눌러주세요</button>
+		<button onclick="send_go2()">눌러주세요</button>
+		<button onclick="send_go3()">눌러주세요</button>
+	
+	</body>
+</html>

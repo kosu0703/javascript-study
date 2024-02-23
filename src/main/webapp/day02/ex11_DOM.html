@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>상위부모, 형제요소 선택하기</title>
+	</head>
+	<body>
+		
+		<main>
+			<section>
+				<article>
+					<ul class="list">
+						<li class="item1">list</li>
+						<li class="item2">list</li>
+						<li class="item3">list</li>
+						<li class="item4">list</li>
+					</ul>
+				</article>
+			</section>	
+		</main>
+		
+		<script type="text/javascript">
+			
+			/* 제일 가까운 상위 부모들 중 요소 선택 : closest() */
+			const li = document.querySelector(`li`);
+			//	li 에서 main 부르기
+			//	main 부터 li 까지 보여줌
+			console.log(li.closest(`main`));
+			//	li 에서 article 부르기
+			//	article 부터 li 까지 보여줌
+			console.log(li.closest(`article`));
+			
+			/* 형제 요소 선택 */
+			const item3 = document.querySelector(`.item3`);
+			//	이전 형제 요소
+			console.log(item3.previousElementSibling);
+			//	이후 형제 요소
+			console.log(item3.nextElementSibling);
+			
+		</script>
+		
+	</body>
+</html>

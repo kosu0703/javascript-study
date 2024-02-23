@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>이벤트 처리</title>
+		
+		<link rel="stylesheet" href="../css/ex14.css">
+		<script defer src="../js/ex14.js"></script>
+		
+	</head>
+	<body>
+	
+		<ul>
+			<li><a href="#" id="btn1">Green</a></li>
+			<li><a href="#" id="btn2">Orange</a></li>
+			<li><a href="#" id="btn3">Purple</a></li>
+		</ul>
+		
+		<ul>
+			<!-- ** on 이 붙으면 함수 호출 -->
+			<li><a href="#" onclick="changBg('green')">Green</a></li>
+			<li><a href="#" onclick="changBg('orange')">Orange</a></li>
+			<li><a href="#" onclick="changBg('purple')">Purple</a></li>
+		</ul>
+	
+		<div id="result"></div>
+	
+	</body>
+</html>

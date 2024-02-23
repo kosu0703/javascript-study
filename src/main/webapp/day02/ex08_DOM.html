@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM 예전거(get 으로 가져오기)</title>
+	</head>
+	<body>
+	
+		<section id="wrap">
+			<article class="box1">TEXT1</article>
+			<article class="box2">TEXT2</article>
+			<article class="box3">TEXT3</article>
+		</section>
+		
+		<script type="text/javascript">
+			
+			//	아이디 선택 => 기본적으로 한개
+			const v1 = document.getElementById(`wrap`);
+			console.log(v1);
+		
+			//	클래스 선택 => 한개 or 여러개
+			const v2 = document.getElementsByClassName(`box1`);
+			for ( let k of v2) {
+				console.log(k);
+			}
+			
+			//	요소 선택 => 한개 or 여러개
+			const v3 = document.getElementsByTagName(`article`);
+			for (let k of v3) {
+				console.log(k);
+			}
+		</script>
+		
+	</body>
+</html>

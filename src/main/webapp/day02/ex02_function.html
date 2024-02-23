@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>함수 연습하기</title>
+		<script type="text/javascript">
+		
+			/* 함수로 함수를 호출하기 => 콜백함수 */
+			function exec(f) {
+				f();
+			}
+		
+			function hello_1() {
+				document.write(`즐거운 오전 입니다.`);
+			}
+			function hello_2() {
+				document.write(`점심식사는 하셨나요?`);
+			}
+			function hello_3() {
+				document.write(`즐거운 오후 되세요.`);
+			}
+			function hello_4() {
+				document.write(`안녕히 주무세요.`);
+			}
+			function hello_5() {
+				document.write(`오늘도 무사히`);
+			}
+			
+		</script>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+		
+			let time = 23;
+			let k = '';
+			
+			if(time < 12) {
+				k = hello_1;
+			}else if (time >= 12 && time <= 14) {
+				k = hello_2;
+			}else if (time >= 15 && time <= 19) {
+				k = hello_3;
+			}else if (time >= 22) {
+				k = hello_4;
+			}else {
+				k = hello_5;
+			}
+			
+			// 	매개변수 함수로 사용해서 함수를 호출 
+			//	**매개변수에는 함수이름만 넣고, 괄호는 () 빼줘야된다.
+			exec(k);
+			
+		</script>
+		
+		
+	</body>
+</html>

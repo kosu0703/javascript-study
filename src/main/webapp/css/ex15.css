@@ -1,0 +1,47 @@
+@charset "UTF-8";
+#item{
+	position: relative;
+	width: 500px;
+	height: auto;
+	padding: 15px 20px;
+	margin: auto;
+}
+/* 버튼 모양 꾸미기 */
+button{
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 5px;
+	border: 1px solid #ccc;
+	font-size: 0.8em;
+}
+/* 사진 위에 올라가자 */
+.over{
+	position: absolute;
+	left: 30px;
+	bottom: 30px;
+}
+/* 상세 설명은 안보이게 */
+.detail{
+	width: 400px;
+	text-align: left;
+	line-height: 1.8;
+	display: none;
+}
+
+#item2{
+	margin: 100px auto;
+	width: 500px;
+}
+#res{
+	margin: 0px 150px;
+	font-size: 2rem;
+}
+
+#item3{
+	margin: 100px auto;
+	width: 500px;
+}
+#res2{
+	margin: 0px 150px;
+	font-size: 2rem;
+}
+

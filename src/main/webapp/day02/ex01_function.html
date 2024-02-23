@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>함수 호출하기</title>
+		<script type="text/javascript">
+		
+			function test(su) {
+				document.write(`<h2>함수호출 방법 ${su} </h2>`);
+			}
+		
+		</script>
+	</head>
+	<body>
+	
+		<h1>자바스크립트 함수 호출</h1>
+		
+		<!-- 방법1 : 화면에 바로 호출 -->
+		<script type="text/javascript">test(1)</script>
+		<hr>
+	
+		<!-- 방법2 : 버튼 누르면 함수호출 -->
+		<button onclick="test(2)">함수호출</button><br>
+		<hr>
+	
+		<!-- 방법3 : 글자 누르면 함수호출 -->
+		<div onclick="test(3)">함수호출</div><br>
+		<hr>
+		
+		<!-- 방법4 : 폼태그 안에 인풋태그에서 타입을 버튼으로 사용가능 -->
+		<form action="#">
+			<input type="hidden" name="id" value="hong">
+			<input type="submit" value="보내기">	<!-- 나중에 -->
+			<input type="button" value="함수호출" onclick="test(4)">
+		</form>
+		
+	</body>
+</html>

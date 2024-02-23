@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>String 클래스</title>
+		<script type="text/javascript">
+		
+			let str1 = "Hello";
+			let str2 = new String("Welcome");
+			
+			//	길이 : length
+			document.write(str1.length + "<br>");	
+			document.write(str2.length + "<br>");	
+			document.write(`<hr>`);
+			
+			//	n번째 문자 추출 : charAt(n) => n 은 index (0부터)			
+			document.write(str1.charAt(0) + "<br>");	
+			document.write(str2.charAt(3) + "<br>");	
+			document.write(`<hr>`);
+			
+			//	문자연결자 : concat(str)
+			document.write(str1.concat(str2) + "<br>");	
+			document.write(`<hr>`);
+			
+			//	해당 문자나 문자열의 위치값 : indexOf('문자나 문자열')
+			//						**정규식 사용 못함, -1 은 찾는 문자가 없다는 의미
+			document.write(str1.indexOf('H') + "<br>");	
+			document.write(str2.indexOf('H') + "<br>");	
+			document.write(`<hr>`);
+
+			//	indexOf('문자열', 시작위치)
+			document.write(str2.indexOf('e', 2) + "<br>");
+			//	즉, 첫번째꺼 찾고 더하기 1
+			document.write(str2.indexOf('e', str2.indexOf('e')+1) + "<br>");	
+			document.write(`<hr>`);
+			
+			//	해당 문자나 문자열의 마지막 위치값 : lastIndexOf('문자나 문자열')
+			document.write(str2.lastIndexOf('e') + "<br>");	
+			document.write(`<hr>`);
+			
+			//	해당 문자나 문자열의 위치값 : search('문자나 문자열')
+			//						**정규식 사용 가능, 두번째 인자는 없다.
+			document.write(str2.search('e') + "<br>");	
+			document.write(`<hr>`);
+			
+			//	원하는 문자열 추출 : slice 와 substring
+			//	slice(begin, end) , substring(begin, end)
+			//	** end 는 포함되지 않는다.
+			str1 = 'Apple, Banana, Kiwi';
+			//	클래스 안에 있기때문에 메서드다.
+			document.write(str1.slice(7, 13) + "<br>");	
+			document.write(str1.substring(0, 5) + "<br>");	
+			document.write(`<hr>`);
+			//	**begin 에서 end 빼면 개수이다.
+			
+			//	원하는 문자열 추출 : substr(begin, 개수)
+			document.write(str1.substr(7, 6) + "<br>");	
+			document.write(`<hr>`);
+			
+			//	치환 : replace(old, new)
+			//	**원본은 변경되지 않는다.
+			document.write(str1.replace('Banana', 'Mango') + "<br>");	
+			document.write(str1 + "<br>");	
+			document.write(`<hr>`);
+			
+			//	대소문자 변환 : toUpperCase(), toLowerCase()
+			document.write(str1.toUpperCase() + "<br>");	
+			document.write(str1.toLowerCase() + "<br>");	
+			document.write(`<hr>`);
+			
+			//	trim() : 앞뒤 공백제거
+			str1 = `apple,banana,kiwi`;
+			str2 = `  apple,banana,kiwi  `;
+			document.write(str1.length + "<br>");	
+			document.write(str2.length + "<br>");	
+			document.write(str2.trim().length + "<br>");	
+			document.write(`<hr>`);
+			
+			//	**문자열을 배열로 : split('구분자')
+			let str3 = str1.split(',');
+			for ( let k in str3) {
+				document.write(`${str3[k]} 사세요~~ <br>`);	
+			}
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

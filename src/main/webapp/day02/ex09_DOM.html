@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>getter setter</title>
+	</head>
+	<body>
+	
+		<p id="msg1">Hello World</p>
+		<p><span id="msg2">Welcome JS</span></p>
+		<p id="msg3">서울시 마포구 신수동</p>
+		<p id="res"></p>
+	
+		<script type="text/javascript">
+			
+			//	msg1 선택
+			//document.getElementById(`msg1`);
+			
+			//	앞에서 선택한 방법으로 선택하고 무언가를 하자 
+			
+			/* html 요소 변경 */ 
+			//	(즉, setter 기능)
+			
+			//		1. 내용 변경(요소,태그 시작에서 끝까지) => innerHTML
+			//		2. 속성 변경(요소,태그 안에 들어간다.) => .속성
+			//		3. CSS 변경 => .style.property
+			
+			//	최신
+			document.querySelector(`#msg1`).innerHTML = `<h2>KOREA SEOUL</h2>`;
+			document.querySelector(`#msg1`).align = `center`;
+			document.querySelector(`#msg1`).style.color = `tomato`;
+			
+			//	옛날거
+			//	id , class , 태그명 다 따로따로 가져와야했지만 
+			//	최근에는 selector 로 다 가져올수있다.
+			document.getElementById(`msg3`).innerHTML = `<h3>KOREA SEOUL</h3>`;
+			document.getElementById(`msg3`).align = `center`;
+			document.getElementById(`msg3`).style.color = `green`;
+			
+			/* html 요소 가져오기 */
+			//	(즉, getter 기능)
+			//	**내용만 가져오고, 속성이나 CSS 는 가져오지 않는다.
+			
+			//	let 변수 = 선택기.innerHTML
+			//	선택기에 해당되는 요소의 content 내용을 가져와서 변수에 저장
+			let str = document.querySelector(`#msg1`).innerHTML;
+			console.log(str);
+			
+			/* html 요소에서 가져온 내용 다른 요소에 넣기 */
+			//	id 가 res 인 요소에 id 가 msg1 인 요소의 content 를 넣자
+			document.querySelector(`#res`).innerHTML = str
+			
+		</script>
+	
+	</body>
+</html>

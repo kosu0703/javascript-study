@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>부모, 자식요소 선택하기</title>
+		
+	</head>
+	<body>
+	
+		<ul class="list">
+			<li class="item1">list1</li>
+			<li class="item2">list2</li>
+			<li class="item3">list3</li>
+			<li class="item4">list4</li>
+		</ul>
+	
+		<ul class="list2">
+			<li class="item1">list1</li>
+			<li class="item2">list2</li>
+			<li class="item3">list3</li>
+			<li class="item4">list4</li>
+		</ul>
+		
+		<script type="text/javascript">
+			
+			/* 자식요소 선택 */
+			//	: 부모 선택 후 children
+			const list = document.querySelector(`.list`);
+			const items = list.children;
+			//	컬렉션으로 나온다.
+			console.log(items);
+			//	하나씩 꺼내기
+			console.log(items[0].innerHTML);	//	내용만 가져오기
+			console.log(items[1]);
+			console.log(items[2]);
+			console.log(items[3]);
+			console.log(`-------------`);
+			
+			//	내용만 하나씩 가져오기
+			for (let k of items) {
+				console.log(k.innerHTML);	
+			}
+			console.log(`-------------`);
+			
+			//	예전 방법은 li 태그 다 가져와서 다른 곳에 있는거도 다 가져옴
+			const list2 = document.getElementsByTagName(`li`);
+			console.log(list2);
+			console.log(`-------------`);
+				
+			/* 부모요소 선택 */
+			//	: 자식 선택 후 parentElement
+			const item1 = document.querySelector(`.item1`);
+			console.log(item1.parentElement);
+			
+		</script>
+	
+	</body>
+</html>
