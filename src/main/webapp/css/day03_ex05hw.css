@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+#container{
+	width: 600px;
+	margin: 0 auto;
+	/* 자신은 블록 레벨 속성을 유지하면서, 자식은 flex 환경설정 */
+	/* 자식 h1, #prod-pic, #desc, #detail */
+	display: flex; 
+	/* 너비를 초과하면 자동 줄바꿈 (크기 유지) */
+	flex-wrap: wrap; 
+}
+/* 줄바꿈 위해서 */
+h1{
+	width: 100%;
+}
+.small{
+	width: 60px;
+	height: 60px;
+	margin-right: 5px;
+}
+#prod-pic, #desc{
+	margin: 20px 20px 20px;
+}
+#desc ul{
+	list-style-type: none;
+	line-height: 1.8;
+	font-size: 1rem;
+	margin: 0px;
+	padding-left: 60px;
+}
+.bluetext{
+	color: blue;
+	font-weight: bold;
+}
+button{
+	width: 200px;
+	height: 40px;
+	margin: 20px auto;
+}
+#view{
+	margin-left: 60px;
+	text-decoration: none;
+}
+#detail{
+	display: none;
+}

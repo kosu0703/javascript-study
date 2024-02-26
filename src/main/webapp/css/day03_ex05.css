@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+#container{
+	width: 600px;
+	margin: 0 auto;	/* 가운데 정렬 */
+}
+#prod-pic, #desc{
+	float: left;
+}
+#prod-pic{
+	margin: 20px 20px auto 10px;
+	padding: 0px;
+}
+#small-pic{
+	margin-top: 20px;
+}
+.small{
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-right: 10px;
+}
+#detail{
+	clear: both;
+	display: none;
+	padding-top: 20px;
+}
+#desc ul{
+	list-style-type: none;
+	font-size: 1rem;
+	line-height: 1.8;
+}
+#desc .bluetext{
+	color: blue;
+	font-weight: bold;
+}
+button{
+	padding: 10px 70px;
+	margin: 20px 0px;
+	
+}
+#view{
+	text-decoration: none;
+	color: blue;
+	margin-left: 40px;
+	margin-bottom: 20px;
+	display: block;
+}
