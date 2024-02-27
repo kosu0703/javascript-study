@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>async await</title>
+	</head>
+	<body>
+	
+		<script type="text/javascript">
+		
+			function fetchUser() {
+				const url = `https:\\jsonplaceholder.typicode.com/users/1`;
+				return fetch(url).then( response => response.json() );
+			}		
+			
+			function fetchTodo() {
+				const url = `https:\\jsonplaceholder.typicode.com/todos/1`;
+				return fetch(url).then( response => response.json() );
+			}
+			
+			//	async 면 비동기지만
+			async function logTodoTitle() {
+				console.log(`1`);
+				//	await 를 하면 이게 끝날때까지 기다려 주세요
+				const user = await fetchUser();
+				console.log(`2`);
+				if (user.id === 1) {
+					const todo = await fetchTodo();
+					//	타이틀만 보기
+					//console.log(todo.title);
+					//	모두 보기
+					console.log(todo);
+				}
+				console.log(`3`);
+			}
+			console.log(`start`);
+			logTodoTitle();
+			console.log(`end`);
+			
+			//	async 안하면 순차적으로 진행
+			
+		</script>
+		
+	</body>
+</html>
